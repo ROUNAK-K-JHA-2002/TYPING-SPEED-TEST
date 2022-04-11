@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Site</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=BIZ+UDPMincho&family=Crete+Round:ital@1&family=Handlee&family=Libre+Baskerville:ital@1&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=BIZ+UDPMincho&family=Bangers&family=Crete+Round:ital@1&family=Handlee&family=Libre+Baskerville:ital@1&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=BIZ+UDPMincho&family=Bangers&family=Crete+Round:ital@1&family=Dancing+Script:wght@700&family=Handlee&family=Kameron&family=Libre+Baskerville:ital@1&family=Playfair+Display:ital@1&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Audiowide&family=BIZ+UDPMincho&family=Bangers&family=Crete+Round:ital@1&family=Dancing+Script:wght@700&family=Handlee&family=Kameron&family=Libre+Baskerville:ital@1&family=Playfair+Display:ital@1&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Audiowide&family=BIZ+UDPMincho&family=Bangers&family=Crete+Round:ital@1&family=Dancing+Script:wght@700&family=Handlee&family=Kameron&family=Libre+Baskerville:ital@1&family=Playfair+Display:ital@1&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <!-- WELCOME MESSAGE  -->
+    <p class="text-center text-warning py-3 py-md-4 topic">WELCOME TO TYPING SPEED TEST</p>
+
+
+
+    <!-- SCREEN 1 -------- FIRST CONTAINER -->
+    <div class="container py-5">
+        <p class="text-center">GREETINGS. WELCOME TO TYPING SPEED TEST</p>
+        <ol class="text-white" style="font-family: 'Libre Baskerville', serif;font-size: 1.5em;">
+            <li>First of all , Thanks for Choosing this Website for testing You Typing Speed</li>
+            <li>Here You are Required to Enter Your Name And Chosse The Difficulty Level</li>
+            <li>Upon Choosen Difficulty , You will have to type the Given sentence </li>
+            <li>Your speed will be calculated as wpm(words per minute)</li>
+            <li>Penalty :
+                <ol>
+                    <li>For each incorrect/missed word 0.5 sec will be added to your timer.</li>
+                    <!-- <li>For each incorrect/missed punctuation 0.25 sec will be added to your timer.</li> -->
+                </ol>
+            </li>
+            <li>This text evaluation is Case sensetive</li>
+            <!-- <li>After Susceesfuly submiting , You can see the the leaderboard on next page</li> -->
+        </ol>
+        <form action="" name="google-sheet" onsubmit="return false" autocomplete="off">
+            <div class="row my-3 justfy-content-center">
+                <div class="mb-3 col-sm col-md mx-2">
+                    <label for="Name" class="form-label text-warning">ENTER YOUR NAME</label>
+                    <input type="text" class="form-control" name="NAME" id="Name" aria-describedby="helpId" placeholder="ENTER YOUR NAME" required>
+                </div>
+                <div class="mb-3 col-sm col-md mx-2">
+                    <label for="difficulty" class="form-label text-warning">DIFFICULTY</label>
+                    <select class="form-control" name="DIFFICULTY" id="DIFFICULTY" required>
+                        <option disabled selected="selected">SELECT</option>
+                        <option>EASY</option>
+                        <option>MEDIUM</option>
+                        <option>HARD</option>
+                    </select>
+                </div>
+            </div>
+            <!-- INPUT - SUBMIT -->
+            <p class="text-center my-5"> <a class="btn btn-info" id="proceed">Proceed</a>
+            </p>
+        </form>
+    </div>
+
+
+
+
+
+    <!-- SCREEN 2 -------- SECOND CONTAINER -->
+
+    <div class="container py-5" style="display: none;line-height: 1cm;">
+        <p class="text-center">GREETINGS. THANKS FOR CHOOSING THIS TYPING SPEED TEST.<br />
+            <p class="text-center" style="font-size: 2.5em;font-family: 'Allerta Stencil', sans-serif;color: #00ff67;" id="playerName"></p>
+            <p class="text-center text-white" id="chosenDifficulty"></p>
+        </p>
+        <ol class="my-4 text-white" style="line-height: 0.8cm;font-size: 1.5em;font-family: 'Libre Baskerville', serif;">
+            <li>Click On start Button to start Typing </li>
+            <li>On clicking start A timer will automatically be started and will be shown on screen</li>
+            <li>Once Completed typing , click on submit to atop the timer </li>
+            <li>To see your result Click On 'View Result'</li>
+            <li>Your performance will be shown on next slide. Enjoy.</li>
+            <li class="text-warning">IF POSSIBLE, PLEASE SHARE YOUR FEEDBACK AND SHARE WITH YOUR FRIENDS TO TEST THEIR TYPING SPEED </li>
+        </ol>
+
+        <p class="text-center text-white" id="timer">
+            <a href="javascript:void(0)" class="btn btn-primary text-center" id="Startbtn">Start</a>
+        </p>
+        <!-- MAIN CONTENT AREA -->
+        <div class="MainContentArea" id="TypingBox">
+
+
+            <!-- TEXT TO TYPE -->
+            <div class="text-warning p-4 my-4 ShowSent" id="sentenceToType">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid non tempora saepe repellat cumque voluptate pariatur eligendi hic numquam a reprehenderit iusto magni, adipisci dolorum repellendus ullam ex, provident odit!
+            </div>
+
+
+            <!-- TEXTBOX -->
+            <div class="mb-3">
+                <label for="" class="form-label text-white">
+                    Type The Above Text As Fast As You Can and as Accurate As Possible
+                </label>
+                <textarea class="form-control" name="" id="UserText" placeholder="Start Typing"></textarea>
+            </div>
+        </div>
+
+
+        <p class="text-center">
+            <a href="javascript:void(0)" class="btn btn-primary text-center" onclick="stopTimer()" id="Submit" style="display: none;">Submit</a>
+            <a href="javascript:void(0)" class="btn btn-primary text-center" style="display:none" onclick="ShowResult()" onclick="stopTimer()" id="ShowResult">View
+                Result</a>
+        </p>
+    </div>
+
+
+    <!-- SCREEN 3 --  THIRD CONTAINER -->
+    <div class="container text-white  py-5" style="display: none;" onload="ShoingResult()">
+        <p class="text-center pt-3" id="resultMessage" style="font-size: 1.8em;">FOR USING THIS SPEED TEST</p>
+        <p class="text-white smallHeading text-center pb-3"> YOUR RESULT </p>
+
+        <!-- SHOWING REFERNCE AND WHAT USER TYPED -->
+        <p class="smallHeading smallHeading mt-3"> REFERNCE SENTENCE GIVEN : </p>
+        <div class="ShowSent px-3 py-2" id="ReferSent">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt quaerat nostrum ea ducimus labore reiciendis odio vel porro ut placeat atque voluptate sequi nihil tenetur velit libero ipsum, corrupti repellendus?</div>
+        <p class="smallHeading smallHeading mt-3"> YOUR TYPED SENTENCE : </p>
+        <div class="ShowSent px-3 py-2 mb-4" id="userSent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere odit, necessitatibus nisi consectetur quis aspernatur, iste, aliquam aut reiciendis mollitia culpa eum! Ullam, exercitationem tempora voluptatibus ipsa aliquam reprehenderit voluptatum?</div>
+
+
+
+        <p class="h3 text-center smallHeading text-white my-3">YOUR SCORE</p>
+
+        <!-- Showing Score -->
+        <div class="showScore d-flex flex-column flex-md-row flex-wrap justify-content-center my-4">
+            <div class="m-3 p-5 text-center" id="ScoreWP"> YOUR SPEED IN WORDS PER MINUTE WITHOUT CONSIDERING PENALTY IS 50
+            </div>
+            <div class="m-3 p-5 text-center" id="ScoreP">YOUR SPEED IN WORDS PER MINUTE CONSIDERING PENALTY IS 50</div>
+        </div>
+
+
+        <p class="h3 text-center smallHeading text-white my-3">YOUR STATS</p>
+
+
+        <!-- Showing Stats -->
+        <div class="showStats d-flex flex-column flex-md-row flex-wrap justify-content-center my-4">
+            <div class="m-3 p-5 text-center" id="overview"> YOUR SPEED IN WORDS PER MINUTE WITHOUT CONSIDERING PENALTY IS 50</div>
+            <div class="m-3 p-5 text-center" id="WordP">YOUR SPEED IN WORDS PER MINUTE CONSIDERING PENALTY IS 50</div>
+            <div class="m-3 p-5 text-center" id="puncP">YOUR SPEED IN WORDS PER MINUTE CONSIDERING PENALTY IS 50</div>
+        </div>
+
+
+        <p class="text-center text-white" id="timer">
+            <a href="" class="btn btn-primary text-center" id="">Test Again</a>
+        </p>
+
+        <p id="share" class="text-center text-warning">Want to Compete with Your Friend ? Share the below given link</p>
+        <p id="newlink" class="text-center"><a href="">link</a></p>
+
+    </div>
+    <footer class="text-center my-5 py-3" style="font-size: 1.2em;">
+        <div class="text-white">© COPYRIGHT DEXTRIX TECHNOLOGIES 2022</div>
+        <div class="text-white">DEVELOPED AND MAINTAINED BY <span class="h4 text-warning">ROUNAK KUMAR
+                JHA</span></div>
+        <div class="text-white">VERSION : 10:11.04.2022</div>
+    </footer>
+
+</body>
+<script src="index.js"></script>
+
+
+</html>

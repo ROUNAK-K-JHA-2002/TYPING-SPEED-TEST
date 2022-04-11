@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Site</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .smallheading {
+            font-size: 1.1em;
+        }
+        
+        .ShowSent {
+            border: 2px solid red;
+            font-size: 1.3em;
+        }
+        
+        .showScore div {
+            border: 2px solid red;
+            width: 30%;
+            height: max-content;
+            font-size: 1.5em;
+        }
+        
+        .showStats div {
+            border: 2px solid red;
+            width: 30%;
+            height: max-content;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- WELCOME MESSAGE  -->
+    <p class="text-center text-warning py-3 py-md-4 topic">WELCOME TO TYPING SPEED TEST</p>
+
+    <div class="container text-white  ">
+        <p class="text-center pt-3" id="resultMessage" style="font-size: 1.8em;">FOR USING THIS SPEED TEST</p>
+        <p class="text-white text-center pb-3"> YOUR RESULT </p>
+
+        <!-- SHOWING REFERNCE AND WHAT USER TYPED -->
+        <p class="smallHeading mt-3"> REFERNCE SENTENCE GIVEN : </p>
+        <div class="ShowSent px-3 py-2" id="ReferSent">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt quaerat nostrum ea ducimus labore reiciendis odio vel porro ut placeat atque voluptate sequi nihil tenetur velit libero ipsum, corrupti repellendus?</div>
+        <p class="smallHeading mt-3"> YOUR TYPED SENTENCE : </p>
+        <div class="ShowSent px-3 py-2 mb-4" id="userSent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere odit, necessitatibus nisi consectetur quis aspernatur, iste, aliquam aut reiciendis mollitia culpa eum! Ullam, exercitationem tempora voluptatibus ipsa aliquam reprehenderit voluptatum?</div>
+
+
+
+        <p class="h3 text-center text-white my-3">YOUR SCORE</p>
+
+        <!-- Showing Score -->
+        <div class="showScore d-flex flex-column flex-md-row flex-wrap justify-content-center my-4">
+            <div class="m-3 p-5 text-center" id="ScoreWP"> YOUR SPEED IN WORDS PER MINUTE WITHOUT CONSIDERING PENALTY IS 50
+            </div>
+            <div class="m-3 p-5 text-center" id="ScoreP">YOUR SPEED IN WORDS PER MINUTE CONSIDERING PENALTY IS 50
+            </div>
+        </div>
+
+
+        <p class="h3 text-center text-white my-3">YOUR STATS</p>
+
+
+        <!-- Showing Stats -->
+        <div class="showStats d-flex flex-column flex-md-row flex-wrap justify-content-center my-4">
+            <div class=" m-3 p-5 text-center" id="overview"> YOUR SPEED IN WORDS PER MINUTE WITHOUT CONSIDERING PENALTY IS 50</div>
+            <div class=" m-3 p-5 text-center" id="WordP">YOUR SPEED IN WORDS PER MINUTE CONSIDERING PENALTY IS 50</div>
+            <div class=" m-3 p-5 text-center" id="puncP">YOUR SPEED IN WORDS PER MINUTE CONSIDERING PENALTY IS 50</div>
+        </div>
+
+
+        <p class="text-center text-white" id="timer">
+            <a href="javascript:void(0)" class="btn btn-primary text-center" id="Startbtn">play again</a>
+        </p>
+
+        <p id="share">Share This link to test Your Friend speed</p>
+
+    </div>
+</body>
+
+</html>

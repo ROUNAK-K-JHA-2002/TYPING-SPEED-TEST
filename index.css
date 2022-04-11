@@ -1,0 +1,100 @@
+body {
+    height: 100vh;
+    background-image: url('bg.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.topic {
+    font-size: 3em;
+    font-family: 'Handlee', cursive;
+}
+
+.container {
+    width: 90%;
+    height: max-content;
+    border-radius: 20px;
+    background-image: linear-gradient(to top, rgba(238, 121, 121, 0.356), rgba(38, 193, 214, 0.336));
+    box-shadow: 5px 5px 5px black;
+}
+
+.container p {
+    font-size: 2em;
+    color: #ff6a00;
+}
+
+.MainContentArea {
+    font-family: 'BIZ UDPMincho', serif;
+    font-size: 1.5em;
+    font-weight: bolder;
+    display: none;
+}
+
+.btn {
+    font-size: 0.8em;
+    border-radius: 10px;
+}
+
+textarea {
+    width: 100%;
+    height: 5cm;
+    display: none;
+}
+
+.smallheading {
+    font-size: 1.1em;
+}
+
+.ShowSent {
+    font-size: 1.2em;
+    border-radius: 20px;
+    background-image: linear-gradient(to top, rgba(238, 121, 121, 0.472), rgba(38, 193, 214, 0.555));
+    box-shadow: 5px 5px 5px black;
+    color: bisque;
+}
+
+.smallHeading {
+    font-family: 'Kameron', serif;
+}
+
+.showScore div {
+    width: 30%;
+    height: max-content;
+    font-size: 1.5em;
+    border-radius: 20px;
+    background-image: linear-gradient(to top, rgba(235, 95, 95, 0.472), rgba(34, 109, 119, 0.555));
+    box-shadow: 5px 5px 5px black;
+    color: rgb(237, 206, 255);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.showStats div {
+    width: 30%;
+    height: 8cm;
+    font-size: 1.5em;
+    border-radius: 20px;
+    background-image: linear-gradient(to top, rgba(238, 121, 121, 0.472), rgba(38, 193, 214, 0.555));
+    box-shadow: 5px 5px 5px black;
+}
+
+@media screen and (max-width: 600px) {
+    .topic {
+        font-size: 2em;
+    }
+    .showScore div {
+        width: 80%;
+    }
+    .showStats div {
+        width: 80%;
+        height: max-content;
+    }
+}
+
+#sentenceToType {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
