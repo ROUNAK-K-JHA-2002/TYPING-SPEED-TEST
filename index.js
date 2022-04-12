@@ -24,6 +24,25 @@
  // ===================================================================================================================================
 
 
+ $(document).ready(function() {
+
+     $('textarea').keypress(function(event) {
+
+         if (event.keyCode == 13) {
+             event.preventDefault();
+         }
+     });
+     $("textarea").keypress(function(event) {
+         if (event.keyCode === 13) {
+             $("#Submit").click();
+         }
+     });
+
+     //  $("#Submit").click(function() {
+     //      alert("Time Recorded. Click");
+     //  });
+ });
+
  //  FETCHING JSON DATA
 
 
@@ -107,6 +126,7 @@
  function StartGame() {
 
      Startbtn.style.display = 'none' //hiding Start Button
+   document.getElementById("SecondPageRule").style.display = "none"; //hiding Second page rule list
      document.getElementById("Submit").style.display = 'inline-block' //hiding Start Button
      document.getElementById('TypingBox').style.display = 'block' //displaying Text box
 
