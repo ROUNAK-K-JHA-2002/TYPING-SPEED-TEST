@@ -189,7 +189,7 @@
      //  Calculating Speed
      speedWP = Math.floor((wordCount / TimeTaken) * 60);
      console.log((wordCount / TimeTaken))
-     document.getElementById("ScoreWP").innerHTML = "YOUR SPEED IN WORDS PER MINUTES WITHOUT CONSIDERING PENALTY IS " + speedWP
+     document.getElementById("ScoreWP").innerHTML = "YOUR SPEED IN WORDS PER MINUTES WITHOUT CONSIDERING PENALTY IS " + speedWP + " WPM."
 
 
 
@@ -224,7 +224,8 @@
      document.getElementById("puncP").innerHTML = "You took " + TimeTaken + " seconds including penalty to complete how much you wrote with given errors."
          //  Calculating Speed
      var speedP = Math.floor((correctWords / TimeTaken) * 60);
-     document.getElementById("ScoreP").innerHTML = "YOUR SPEED IN WORDS PER MINUTES CONSIDERING PENALTY IS " + speedP
+     document.getElementById("ScoreP").innerHTML = "YOUR SPEED IN WORDS PER MINUTES CONSIDERING PENALTY IS " + speedP + " WPM."
+
 
      console.log("Your speed WPM is " + speedP);
  }
